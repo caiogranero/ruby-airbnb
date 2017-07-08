@@ -6,25 +6,26 @@ Inspirado por [GitHub's guide](https://web.archive.org/web/20160410033955/https:
 
 Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
 
-## Table of Contents
+## Indíce
   1. [Espaços em branco](#espaços-em-branco)
     1. [Indentação](#indentação)
     1. [Linha única](#linha-única)
     1. [Novas linhas](#novas-linhas)
   1. [Tamanho das linhas](#tamanho-das-linhas)
-  1. [Comentários](#comentarios)
-    1. [Comentários de arquivos/classes](#comentarios-de-arquivos-classes)
-    1. [Comentários de funções](#comentarios-de-funcoes)
-    1. [Comentários de blocos e linhas únicas](#comentarios-de-blocos-e-linhas-unicas)
-    1. [Pontuação, ortografia e gramática](#pontuacao-ortografia-e-gramatica)
-    1. [Comentários de pendencias](#comentarios-de-pendencias)
-    1. [Códigos comentado](#commented-out-code)
-  1. [Métodos](#metodos)
-    1. [Definição de métodos](#definicao-de-metodos)
-    1. [Chamada de métodos](#chamada-de-metodos)
-  1. [Expressões condicionais](#expressoes-condicionais)
+  1. [Comentários](#comentários)
+    1. [Comentários de arquivos/classes](#comentários-de-arquivosclasses)
+    1. [Comentários de funções](#comentários-de-funções)
+    1. [Comentários de blocos e linhas únicas](#comentários-de-blocos-e-linhas-únicas)
+    1. [Pontuação, ortografia e gramática](#pontuação-ortografia-e-gramática)
+    1. [Comentários de pendencias](#comentários-de-pendencias)
+    1. [Códigos comentado](#códigos-comentado)
+  1. [Métodos](#métodos)
+    1. [Definição de métodos](#definição-de-métodos)
+    1. [Chamada de métodos](#chamada-de-métodos)
+  1. [Expressões condicionais](#expressões-condicionais)
     1. [Palavras condicionais](#palavras-condicionais)
-    1. [Operator ternário](#operator-ternario)
+    1. [Operador ternário](#operador-ternário)
+    1. [Condições longas](#condições-longas) ////
   1. [Syntax](#syntax)
   1. [Naming](#naming)
   1. [Classes](#classes)
@@ -184,10 +185,10 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
 
     ```ruby
     # ruim
-    var = "Texto com #{ foobar } variáveis."
+    var = "This #{foobar} is interpolated."
 
     # bom
-    var = "Texto com #{foobar} variáveis."
+    var = "This #{foobar} is interpolated."
     ```
 
 * <a name="sem-espaco-range-numeros"></a>Não use espaços em range númericos.
@@ -503,32 +504,30 @@ Comentários de pendências devem incluir a palavra TODO, seguido pelo nome comp
 
 ### Chamada de métodos
 
-**Use parentheses** for a method call:
+**Uso do parênteses** para uma chamada de método:
 
-* <a name="returns-val-parens"></a>If the method returns a value.
-    <sup>[[link](#returns-val-parens)]</sup>
+* <a name="retorna-valor-parenteses"></a>Se o método retorna um valor.
+    <sup>[[link](#retorna-valor-parenteses)]</sup>
 
     ```ruby
-    # bad
+    # ruim
     @current_user = User.find_by_id 1964192
 
-    # good
+    # bom
     @current_user = User.find_by_id(1964192)
     ```
 
-* <a name="first-arg-parens"></a>If the first argument to the method uses
-    parentheses.<sup>[[link](#first-arg-parens)]</sup>
+* <a name="parenteses-primeiro-argumento"></a>Se o primeiro argumento do método necessita de parenteses.<sup>[[link](#parenteses-primeiro-argumento)]</sup>
 
     ```ruby
-    # bad
+    # ruim
     put! (x + y) % len, value
 
-    # good
+    # bom
     put!((x + y) % len, value)
     ```
 
-* <a name="space-method-call"></a>Never put a space between a method name and
-    the opening parenthesis.<sup>[[link](#space-method-call)]</sup>
+* <a name="espaco-chamada-metodo"></a>Nunca coloque espaço entre o nome do método e parenteses.<sup>[[link](#espaco-chamada-metodo)]</sup>
 
     ```ruby
     # bad
@@ -538,68 +537,63 @@ Comentários de pendências devem incluir a palavra TODO, seguido pelo nome comp
     f(3 + 2) + 1
     ```
 
-* <a name="no-args-parens"></a>**Omit parentheses** for a method call if the
-    method accepts no arguments.<sup>[[link](#no-args-parens)]</sup>
+* <a name="sem-parenteses-argumentos"></a>**Não use parênteses** para uma chamada de método se o método aceita argumentos.<sup>[[link](#sem-parenteses-argumentos)]</sup>
 
     ```ruby
-    # bad
+    # ruim
     nil?()
 
-    # good
+    # bom
     nil?
     ```
 
-* <a name="no-return-parens"></a>If the method doesn't return a value (or we
-    don't care about the return), parentheses are optional. (Especially if the
-    arguments overflow to multiple lines, parentheses may add readability.)
-    <sup>[[link](#no-return-parens)]</sup>
+* <a name="sem-parenteses-no-retorno"></a>Se o método não retorna um valor (ou não nos importamos com o retorno), o parenteses é opcional. (Com exceção se o argumento ocupa multiplas linhas, parênteses podem ajudar a leitura.)
+    <sup>[[link](#sem-parenteses-no-retorno)]</sup>
 
     ```ruby
-    # okay
+    # bom
     render(:partial => 'foo')
 
-    # okay
+    # bom
     render :partial => 'foo'
     ```
 
-In either case:
+Em ambos os casos:
 
-* <a name="options-no-braces"></a>If a method accepts an options hash as the
-    last argument, do not use `{` `}` during invocation.
-    <sup>[[link](#options-no-braces)]</sup>
+* <a name="hash-sem-chaves"></a>Se o método aceita um hash de opções como último argumento, não use `{` `}` durante a chamada.
+    <sup>[[link](#hash-sem-chaves)]</sup>
 
     ```ruby
-    # bad
+    # ruim
     get '/v1/reservations', { :id => 54875 }
 
-    # good
+    # bom
     get '/v1/reservations', :id => 54875
     ```
 
-## Conditional Expressions
+## Expressões condicionais
 
-### Conditional keywords
+### Palavras condicionais
 
-* <a name="multiline-if-then"></a>Never use `then` for multi-line `if/unless`.
-    <sup>[[link](#multiline-if-then)]</sup>
+* <a name="multi-if-then"></a>Nunca use `then` com `if/unless` em múltiplas linhas.
+    <sup>[[link](#multi-if-then)]</sup>
 
     ```ruby
-    # bad
+    # ruim
     if some_condition then
       ...
     end
 
-    # good
+    # bom
     if some_condition
       ...
     end
     ```
 
-* <a name="multiline-while-until"></a>Never use `do` for multi-line `while` or
-    `until`.<sup>[[link](#multiline-while-until)]</sup>
+* <a name="multi-while-until"></a>Nunca use `do` com `while` ou `until` em múltiplas linhas. <sup>[[link](#multi-while-until)]</sup>
 
     ```ruby
-    # bad
+    # ruim
     while x > 5 do
       ...
     end
@@ -608,7 +602,7 @@ In either case:
       ...
     end
 
-    # good
+    # bom
     while x > 5
       ...
     end
@@ -618,17 +612,14 @@ In either case:
     end
     ```
 
-* <a name="no-and-or"></a>The `and`, `or`, and `not` keywords are banned. It's
-    just not worth it. Always use `&&`, `||`, and `!` instead.
+* <a name="no-and-or"></a>As palavras `and`, `or`, e `not` estão banidas. Não as use. Ao invés, sempre use `&&`, `||`, e `!`.
     <sup>[[link](#no-and-or)]</sup>
 
-* <a name="only-simple-if-unless"></a>Modifier `if/unless` usage is okay when
-    the body is simple, the condition is simple, and the whole thing fits on
-    one line. Otherwise, avoid modifier `if/unless`.
-    <sup>[[link](#only-simple-if-unless)]</sup>
+* <a name="somente-use-simples-if-unless"></a>Modificar `if/unless` é válido quando o conteúdo é pequeno, a condição é simples e tudo se encaixa em uma linha. Caso contrário, evite modificar `if/unless`.
+    <sup>[[link](#somente-use-simples-if-unless)]</sup>
 
     ```ruby
-    # bad - this doesn't fit on one line
+    # ruim - isso não se encaixa em uma linha
     add_trebuchet_experiments_on_page(request_opts[:trebuchet_experiments_on_page]) if request_opts[:trebuchet_experiments_on_page] && !request_opts[:trebuchet_experiments_on_page].empty?
 
     # okay
@@ -638,25 +629,24 @@ In either case:
       add_trebuchet_experiments_on_page(request_opts[:trebuchet_experiments_on_page])
     end
 
-    # bad - this is complex and deserves multiple lines and a comment
+    # ruim - isso é complexo e merece multiplas linhas e comentários
     parts[i] = part.to_i(INTEGER_BASE) if !part.nil? && [0, 2, 3].include?(i)
 
     # okay
     return if reconciled?
     ```
 
-* <a name="no-unless-with-else"></a>Never use `unless` with `else`. Rewrite
-    these with the positive case first.<sup>[[link](#no-unless-with-else)]</sup>
+* <a name="nao-use-unless-com-else"></a>Nunca use `unless` com `else`. Reescreva com o uso de `if`.<sup>[[link](#nao-use-unless-com-else)]</sup>
 
     ```ruby
-    # bad
+    # ruim
     unless success?
       puts 'failure'
     else
       puts 'success'
     end
 
-    # good
+    # bom
     if success?
       puts 'success'
     else
@@ -664,8 +654,7 @@ In either case:
     end
     ```
 
-* <a name="unless-with-multiple-conditions"></a>Avoid `unless` with multiple
-    conditions.<sup>[[link](#unless-with-multiple-conditions)]</sup>
+* <a name="unless-com-multiplas-condicoes"></a>Evite usar `unless``com múltiplas condições.<sup>[[link](#unless-com-multiplas-condicoes)]</sup>
 
     ```ruby
       # bad
@@ -679,25 +668,25 @@ In either case:
       end
     ```
 
-* <a name="unless-with-comparison-operator"></a>Avoid `unless` with comparison operators if you can use `if` with an opposing comparison operator.<sup>[[link](#unless-with-comparison-operator)]</sup>
+* <a name="unless-com-operador-de-comparacao"></a>Evite usar `unless` com operadores de comparação. Use `if`  nesse caso.<sup>[[link](#unless-com-operador-de-comparacao)]</sup>
 
     ```ruby     
-      # bad
+      # ruim
       unless x == 10
         ...
       end
       
-      # good
+      # bom
       if x != 10
         ...
       end
       
-      # bad
+      # ruim
       unless x < 10
         ...
       end
       
-      # good
+      # bom
       if x >= 10
         ...
       end
@@ -708,47 +697,41 @@ In either case:
       end
     ```
 
-* <a name="parens-around-conditions"></a>Don't use parentheses around the
-    condition of an `if/unless/while`.
-    <sup>[[link](#parens-around-conditions)]</sup>
+* <a name="parenteses-com-condicoes"></a>Não use parênteses nas condições em `if/unless/while`.
+    <sup>[[link](#parenteses-com-condicoes)]</sup>
 
     ```ruby
-    # bad
+    # ruim
     if (x > 10)
       ...
     end
 
-    # good
+    # bom
     if x > 10
       ...
     end
 
     ```
 
-### Ternary operator
+### Operador ternário
 
-* <a name="avoid-complex-ternary"></a>Avoid the ternary operator (`?:`) except
-    in cases where all expressions are extremely trivial. However, do use the
-    ternary operator(`?:`) over `if/then/else/end` constructs for single line
-    conditionals.<sup>[[link](#avoid-complex-ternary)]</sup>
+* <a name="evite-operadores-ternarios-complexos"></a>Evite utilizar operadores ternários (`?:`) a não ser que a condĩção seja extremamente trivial. Por outro lado, use o operador ternário (`?:`) ao invés de `if/then/else/end` para condições de linhas únicas.<sup>[[link](#evite-operadores-ternarios-complexos)]</sup>
 
     ```ruby
-    # bad
+    # ruim
     result = if some_condition then something else something_else end
 
-    # good
+    # bom
     result = some_condition ? something : something_else
     ```
 
-* <a name="no-nested-ternaries"></a>Use one expression per branch in a ternary
-    operator. This also means that ternary operators must not be nested. Prefer
-    `if/else` constructs in these cases.<sup>[[link](#no-nested-ternaries)]</sup>
+* <a name="sem-operadores-ternarios-longos"></a>Use uma expressão por bloco em operadores ternários. Isso significa que operadores ternários não devem ser longos. Prefira `if/else` nesses casos.<sup>[[link](#sem-operadores-ternarios-longos)]</sup>
 
     ```ruby
-    # bad
+    # ruim
     some_condition ? (nested_condition ? nested_something : nested_something_else) : something_else
 
-    # good
+    # bom
     if some_condition
       nested_condition ? nested_something : nested_something_else
     else
@@ -756,20 +739,19 @@ In either case:
     end
     ```
 
-* <a name="single-condition-ternary"></a>Avoid multiple conditions in ternaries.
-    Ternaries are best used with single conditions.
-    <sup>[[link](#single-condition-ternary)]</sup>
+* <a name="operador-ternario-condicoes-simples"></a>Evite multiplas condições em operadores ternários.
+    Operadores ternários são melhor usados em condições simples.
+    <sup>[[link](#operador-ternario-condicoes-simples)]</sup>
 
-* <a name="no-multiline-ternaries"></a>Avoid multi-line `?:` (the ternary
-    operator), use `if/then/else/end` instead.
-    <sup>[[link](#no-multiline-ternaries)]</sup>
+* <a name="sem-multiplas-linhas-ternario"></a>Evite multiplas linhas com o operador ternário `?:`, nesses casos, use `if/then/else/end`.
+    <sup>[[link](#sem-multiplas-linhas-ternario)]</sup>
 
     ```ruby
-    # bad
+    # ruim
     some_really_long_condition_that_might_make_you_want_to_split_lines ?
       something : something_else
 
-    # good
+    # bom
     if some_really_long_condition_that_might_make_you_want_to_split_lines
       something
     else
@@ -777,25 +759,21 @@ In either case:
     end
     ```
 
-### Nested conditionals
+### Condições longas
 
-* <a name="no-nested-conditionals"></a>
-  Avoid the use of nested conditionals for flow of control. 
-  ([More on this][avoid-else-return-early].) <sup>[[link](#no-nested-conditionals)]</sup>
+* <a name="sem-condicoes-longas"></a>
+  Evite utilizar condições muito longas para controle do fluxo.
+  ([Leia mais sobre isso][avoid-else-return-early].) <sup>[[link](#sem-condicoes-longas)]</sup>
   
-  Prefer a guard clause when you can assert invalid data. A guard clause
-  is a conditional statement at the top of a function that returns as soon
-  as it can. 
+  Prefira utilizar uma clause guard quando pode receber um dado inválida. Uma guard clause é uma condição no topo de uma função que retorna assim que possível. 
   
-  The general principles boil down to:
-  * Return immediately once you know your function cannot do anything more.
-  * Reduce nesting and indentation in the code by returning early. This makes
-  the code easier to read and requires less mental bookkeeping on the part
-  of the reader to keep track of `else` branches.
-  * The core or most important flows should be the least indented.
+  Os principios dessa clausula, são:
+  * Retorna assim que sua função sabe que não pode fazer mais nada.
+  * Diminui o tamanho do código. Isso faz o código ser mais fácil de ler e necessita menos atenção em relação a blocos `if/else`.
+  * O fluxo principal deve ser o último a ser validado.
 
   ```ruby
-  # bad
+  # ruim
   def compute
     server = find_server
     if server
@@ -809,7 +787,7 @@ In either case:
     end
   end
 
-  # good
+  # bom
   def compute
     server = find_server
     return unless server
@@ -821,78 +799,69 @@ In either case:
   end
   ```
 
-  Prefer `next` in loops instead of conditional blocks.
+  Durante os laços, prefira utilizar `next` ao invés de blocos condicionais.
 
   ```ruby
-  # bad
+  # ruim
   [0, 1, 2, 3].each do |item|
     if item > 1
       puts item
     end
   end
 
-  # good
+  # bom
   [0, 1, 2, 3].each do |item|
     next unless item > 1
     puts item
   end
   ```
 
-  See also the section "Guard Clause", p68-70 in Beck, Kent.
-  *Implementation Patterns*. Upper Saddle River: Addison-Wesley, 2008, which
-  has inspired some of the content above.
+  Veja também a seção "Guard Clause", p68-70 in Beck, Kent.
+  *Implementation Patterns*. Upper Saddle River: Addison-Wesley, 2008, que inspirou o conteúdo acima.
 
-## Syntax
+## Sintaxe
 
-* <a name="no-for"></a>Never use `for`, unless you know exactly why. Most of the
-    time iterators should be used instead. `for` is implemented in terms of
-    `each` (so you're adding a level of indirection), but with a twist - `for`
-    doesn't introduce a new scope (unlike `each`) and variables defined in its
-    block will be visible outside it.<sup>[[link](#no-for)]</sup>
+* <a name="nao-use-for"></a>Nunca use `for`, a não ser que você saiba o por que. Utilize outros interatores. `for` é implementado da mesma forma que o `each`, porém com uma divergência, `for` não introduz um novo escopo e variáveis definidas dentro do seu bloco serão vistas fora dele.<sup>[[link](#nao-use-for)]</sup>
 
     ```ruby
     arr = [1, 2, 3]
 
-    # bad
+    # ruim
     for elem in arr do
       puts elem
     end
 
-    # good
+    # bom
     arr.each { |elem| puts elem }
     ```
 
-* <a name="single-line-blocks"></a>Prefer `{...}` over `do...end` for
-    single-line blocks.  Avoid using `{...}` for multi-line blocks (multiline
-    chaining is always ugly). Always use `do...end` for "control flow" and
-    "method definitions" (e.g. in Rakefiles and certain DSLs).  Avoid `do...end`
-    when chaining.<sup>[[link](#single-line-blocks)]</sup>
+* <a name="blocos-de-linhas-unicas"></a>Prefira `{...}` ao invés de `do...end` para blocos únicos. Evite usar `{...}` para blocos de múltiplas linhas (Chaves com multiplas linhas sempre são mal vistos). Sempre use `do...end` para "controle do fluxo" e "definição de métodos" (Exemplo: em Rakefiles e alguns DSLs).  Evite `do...end` com encadeamento.<sup>[[link](#blocos-de-linhas-unicas)]</sup>
 
     ```ruby
     names = ["Bozhidar", "Steve", "Sarah"]
 
-    # good
+    # bom
     names.each { |name| puts name }
 
-    # bad
+    # ruim
     names.each do |name| puts name end
 
-    # good
+    # bom
     names.each do |name|
       puts name
       puts 'yay!'
     end
 
-    # bad
+    # ruim
     names.each { |name|
       puts name
       puts 'yay!'
     }
 
-    # good
+    # bom
     names.select { |name| name.start_with?("S") }.map { |name| name.upcase }
 
-    # bad
+    # ruim
     names.select do |name|
       name.start_with?("S")
     end.map { |name| name.upcase }
