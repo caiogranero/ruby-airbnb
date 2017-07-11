@@ -1,27 +1,21 @@
 # Rationales
 
-This document contains what are at times lengthy rationales and justifications
-for the decisions made in the main [Style guide](./README.md).
+Esse documento contém os motivos e justificativas das decisões expostas no guia de estilo principal [Style guide](./README.md).
 
-## Table of Contents
-  1.  [Line Length](#line-length)
+## Índice
+  1.  [Tamanho das linhas](#tamanho-das-linhas)
 
-### Line Length
+### Tamanho das linhas
 
-Keeping code visually grouped together (as a 100-character line limit enforces)
-makes it easier to understand. For example, you don't have to scroll back and
-forth on one line to see what's going on -- you can view it all together.
+Manter o visual do código compactado (forçando a limitação em 100 caracteres por linha) faz com que seja mais fácil de entender. Por exemplo, você não tem que avançar/voltar a tela para ver o que está acontecendo -- você pode ver tudo junto.
 
-Here are examples from our codebase showing several techniques for
-breaking complex statements into multiple lines that are all < 100
-characters. Notice techniques like:
+Aqui estão alguns exemplos da nossa base de dados de código que mostra algumas técnicas para diminuir complexidades do código em multiplas linhas, sendo que todas respeitam o limite de 100 caracteres. Algumas técnicas são: 
 
-* liberal use of linebreaks inside unclosed `(` `{` `[`
-* chaining methods, ending unfinished chains with a `.`
-* composing long strings by putting strings next to each other, separated
-  by a backslash-then-newline.
-* breaking long logical statements with linebreaks after operators like
-  `&&` and `||`
+* Uso ilimitado de notações para continuação da linha, como: `(` `{` `[`
+* Métodos encadeados, terminando métodos que não foram concluídos com `.`
+* Criando grandes textos, colocando strings próximas a outras e separando com barra invertida para novas linhas.
+* Quebra de longos blocos lógicos com quebra-de-linha após operadores como
+  `&&` e `||`
 
 ```ruby
 scope = Translation::Phrase.includes(:phrase_translations).
@@ -62,7 +56,7 @@ end
 <% end %>
 ```
 
-These code snippets are very much more readable than the alternative:
+Os códigos acima são muito mais fáceis de ler do que os abaixo:
 
 ```ruby
 scope = Translation::Phrase.includes(:phrase_translations).joins(:phrase_screenshots).where(:phrase_screenshots => { :controller => controller_name, :action => JAROMIR_JAGR_SALUTE })

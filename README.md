@@ -25,7 +25,7 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
   1. [Expressões condicionais](#expressões-condicionais)
     1. [Palavras condicionais](#palavras-condicionais)
     1. [Operador ternário](#operador-ternário)
-    1. [Condições longas](#condições-longas) ////
+    1. [Condições longas](#condições-longas)
   1. [Sintaxe](#sintaxe)
   1. [Nomenclatura](#nomenclatura)
   1. [Classes](#classes)

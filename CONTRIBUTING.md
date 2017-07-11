@@ -1,22 +1,12 @@
-# How to Contribute
+# Como Contribuir
 
-Interested in contributing to the Airbnb Ruby style guide? Awesome! Here are
-some guidelines to help you out.
+Interessado em contribuir para o Guia de Estilo Ruby do Airbnb? Incrível! Aqui está algumas orientações que irão te ajudar.
 
-**Setting expectations**: Although we love hearing from others who are invested
-in Ruby style, ultimately this style guide is used to dictate the code style
-*within Airbnb*. It isn't a community style guide, and as such we may reject
-issues or PRs that simply don't fit our internal engineering needs.
+**Expectativas de configuração**: Apesar de adorarmos ouvir de outros que estão investindo no estilo da linguagem Ruby, esse guia é usado para definir os padrões de código *dentro do Airbnb*. Não é um guia comunitário, e por isso, podemos acabar rejeitadando alguma issue ou PRs que simplesmente não se encaixe nas nossas necessidades internas.
 
 ## Pull Requests
 
-PRs to the style guide should include a description of the proposal, including
-examples of what "good" and "bad" code would look like under the new rule, as
-well as a rationale for the rule in question. The description of the rule and
-the examples belong in `README.md`. If the rationale is anything other than "for
-consistency", it should go into a corresponding section in `rationales.md`.
-Style rules that are purely about consistency do not need rationales.
+Todo PRs para o guia de estilo deve conter uma descrição do seu propósito, incluindo exemplos de uso "bom" e "ruim" de como o código deve ser feito com base na nova regra, incluindo um motivo para essa regra. Também é necessário incluir os exemplos e a descrição no `README.md`. Caso o motivo seja qualquer coisa além de "consistência", deve ser inserido na seção em `rationales.md`.
+Regras de estilos que são puramente devido a consistencia, não é necessário inserir motivos para usa-las.
 
-Individual rules should include, after the description of the rule, a link to
-that rule, and, if a rationale is being added to `rationales.md`, a link to the
-detailed rationale.
+Regras individuais devem incluir, depois da descrição da regra, um link para essa regra, e, se o motivo for inserido no `rationales.md`, um link mais detalhado do motivo.
