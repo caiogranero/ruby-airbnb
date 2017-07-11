@@ -1,12 +1,12 @@
 # Ruby Style Guide
 
-O guia de estilo para Ruby do Airbnb.
+O guia de estilo paras Ruby do Airbnb.
 
 Inspirado por [GitHub's guide](https://web.archive.org/web/20160410033955/https://github.com/styleguide/ruby) e [Bozhidar Batsov's guide][bbatsov-ruby].
 
 Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
 
-## Indíce
+## Índice
   1. [Espaços em branco](#espaços-em-branco)
     1. [Indentação](#indentação)
     1. [Linha única](#linha-única)
@@ -17,7 +17,7 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
     1. [Comentários de funções](#comentários-de-funções)
     1. [Comentários de blocos e linhas únicas](#comentários-de-blocos-e-linhas-únicas)
     1. [Pontuação, ortografia e gramática](#pontuação-ortografia-e-gramática)
-    1. [Comentários de pendencias](#comentários-de-pendencias)
+    1. [Comentários de pendências](#comentários-de-pendências)
     1. [Códigos comentado](#códigos-comentado)
   1. [Métodos](#métodos)
     1. [Definição de métodos](#definição-de-métodos)
@@ -26,18 +26,18 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
     1. [Palavras condicionais](#palavras-condicionais)
     1. [Operador ternário](#operador-ternário)
     1. [Condições longas](#condições-longas) ////
-  1. [Syntax](#syntax)
-  1. [Naming](#naming)
+  1. [Sintaxe](#sintaxe)
+  1. [Nomenclatura](#nomenclatura)
   1. [Classes](#classes)
-  1. [Exceções](#excecoes)
-  1. [Coleções](#colecoes)
-  1. [Strings](#strings)
-  1. [Expressões regulares](#regular-expressions)
-  1. [Percent Literals](#percent-literals)
+  1. [Exceções](#exceções)
+  1. [Coleções](#coleções)
+  1. [Textos](#textos)
+  1. [Expressões regulares](#expressões-regulares)
+  1. [Notação de porcentagem](#notação-de-porcentagem)
   1. [Rails](#rails)
-    1. [Scopes](#scopes)
-  1. [Seja consistente](#be-consistent)
-  1. [Tradução](#translation)
+    1. [Escopo](#escopo)
+  1. [Seja consistente](#seja-consistente)
+  1. [Tradução](#Tradução)
 
 ## Espaços em branco
 
@@ -70,7 +70,7 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
            end
     ```
 
-* <a name="alinhar-parametros-de-funcao"></a>Alinhe todos os parametros de função ou na mesma linha ou um por linha.<sup>[[link](#alinhar-parametros-de-funcao)]</sup>
+* <a name="alinhar-parametros-de-funcao"></a>Alinhe todos os parâmetros de função ou na mesma linha ou um por linha.<sup>[[link](#alinhar-parametros-de-funcao)]</sup>
 
     ```ruby
     # ruim
@@ -104,7 +104,7 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
     end
     ```
 
-* <a name="indente-multi-line-bool"></a>Indente continuamente multiplas linhas de expressões condicionais.<sup>[[link](#indente-multi-linhas-bool)]</sup>
+* <a name="indente-multi-line-bool"></a>Indente continuamente múltiplas linhas de expressões condicionais.<sup>[[link](#indente-multi-linhas-bool)]</sup>
 
     ```ruby
     # ruim
@@ -127,7 +127,7 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
 * <a name="espacos-perdido"></a>Nunca deixe espaços em branco soltos.
     <sup>[[link](#espacos-perdido)]</sup>
 
-* <a name="espaco-antes-comentario"></a>Quando fizer comentários de linha única, inclua um espaço entre o fim do código e o começo do comentário.
+* <a name="espaco-antes-comentario"></a>Quando fizer comentários em apenas uma, inclua um espaço entre o fim do código e o começo do comentário.
     <sup>[[link](#espaco-antes-comentario)]</sup>
 
     ```ruby
@@ -155,7 +155,7 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
     result = func(a, b)
     ```
 
-* <a name="bloco-espaco-parametro"></a>Não inclua espaço dentro de blocos de parâmetros. Inclua um espaço entre parametros dentro de um bloco. Inclua um espaço fora do bloco de parametro.
+* <a name="bloco-espaco-parametro"></a>Não inclua espaço dentro de blocos de parâmetros. Inclua um espaço entre parâmetros dentro de um bloco. Inclua um espaço fora do bloco de parâmetro.
     <sup>[[link](#bloco-espaco-parametro")]</sup>
 
     ```ruby
@@ -204,7 +204,7 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
 
 ### Novas linhas
 
-* <a name="if-multiplas-novas-linhas"></a>Adiciona uma nova linha depois da condição `if` usada com multiplicas linhas, para ajudar diferenciar entre condições e o conteúdo.
+* <a name="if-multiplas-novas-linhas"></a>Adiciona uma nova linha depois da condição `if` usada com múltiplas linhas para ajudar diferenciar entre condições e o conteúdo.
     <sup>[[link](#if-multiplas-novas-linhas)]</sup>
 
     ```ruby
@@ -225,7 +225,7 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
     robot.add_trait(:human_like_intelligence)
     ```
 
-* <a name="nova-linha-diferente-conteudos"></a>Não quebre linhas entre diferentes conteúdos (Como classes ou modulos).
+* <a name="nova-linha-diferente-conteudos"></a>Não quebre linhas entre diferentes conteúdos (Como classes ou módulos).
     <sup>[[link](#nova-linha-diferente-conteudos)]</sup>
 
     ```ruby
@@ -233,7 +233,7 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
     class Foo
 
       def bar
-        # conteudo omitido
+        # conteúdo omitido
       end
 
     end
@@ -241,12 +241,12 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
     # bom
     class Foo
       def bar
-        # conteudo omitido
+        # conteúdo omitido
       end
     end
     ```
 
-* <a name="nova-linha-entre-metodos"></a>Inclua APENAS uma nova linha entre metodos.
+* <a name="nova-linha-entre-metodos"></a>Inclua *APENAS* uma nova linha entre métodos.
     <sup>[[link](#nova-linha-entre-metodos)]</sup>
 
     ```ruby
@@ -274,18 +274,18 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
     end
     ```
 
-* <a name="finaliza-nova-linha"></a>Finalize cada linha com uma nova linha. Não inclua multiplas linhas no fim do seu arquivo.
+* <a name="finaliza-nova-linha"></a>Finalize cada linha com uma nova linha. Não inclua múltiplas linhas no fim do seu arquivo.
     <sup>[[link](#finaliza-nova-linha)]</sup>
 
 ## Tamanho das linhas
 
-* Mantenha cada linha do código com um tamanho viável para leitura. A não ser, você tenha uma razão para não fazer, mantenha linhas com menos de 100 caractéres.
+* Mantenha cada linha do código com um tamanho viável para leitura. A não ser que você tenha uma razão para não fazer, mantenha linhas com menos de 100 caracteres.
   ([rationale](./rationales.md#line-length))<sup>
   [[link](#line-length)]</sup>
 
 ## Comentários
 
-> Apesar de ser chato de escrever, comentários são extremamente importantes para manter o código viável para leitura. As regras a seguir descrevem o que você devería comentar e aonde. Mas lembre-se: Enquanto comentários são muito importantes, um bom código é auto-documentável. Nome com sentido para variáveis e métodos são melhores do que usar nomes sem significado que você precise explicar através de comentários.
+> Apesar de ser chato de escrever, comentários são extremamente importantes para manter o código viável para leitura. As regras a seguir descrevem o que você devería comentar e aonde. Mas lembre-se: Enquanto comentários são muito importantes, um bom código é auto-documentável. Definir nomes com sentido para variáveis e métodos são melhores do que usar nomes sem significado que você precise explicar através de comentários.
 
 > Enquanto estiver escrevendo seus comentários, escreva para o seu público: O próximo colaborador que irá precisar entender seu código. Seja generoso - o próximo pode ser você!
 
@@ -384,7 +384,7 @@ Operações complicadas merecem algumas linhas de comentários antes do seu come
 
 ```ruby
 def fallbacks_for(the_locale, opts = {})
-  # dup() produzi um array que podemos alterar
+  # dup() produz um array que podemos alterar
   ret = @fallbacks[the_locale].dup
 
   # Temos que assumir duas coisas aqui:
@@ -402,7 +402,7 @@ end
 
 Por outro lado, nunca descreva seu comentário. Assuma que a pessoa lendo o código conhece a linguagem (e não o que você está fazendo) melhor que você.
 
-<a name="sem-blocos-de-comentarios"></a>Relacionado: Não use blocos de comentários. Eles não podem ser precedidos por espaços e não são faceis de encaixar se comparado a comentários padrões.
+<a name="sem-blocos-de-comentarios"></a>Relacionado: Não use blocos de comentários. Eles não podem ser precedidos por espaços e não são fáceis de encaixar no código se comparado a comentários padrões.
   <sup>[[link](#sem-blocos-de-comentarios)]</sup>
 
   ```ruby
@@ -429,7 +429,7 @@ Apesar que pode ser frustante ter passar por um code review que aponte que você
 
 Comentários de pendências no código são temporários, uma solução a curto prazo.
 
-Comentários de pendências devem incluir a palavra TODO, seguido pelo nome completo da pessoa que conhece mais do problema. Dois pontos é opcional. Um comentário explicando qual o requisito dessa tarefa é o obrigatório. O principal motivo de ter um comentário de pendência consistente é ser fácil de encontrar a pessoa que está sendo mencionada. Esse comentário não é um compromisso para a pessoa mencionada resolver o problema. Tanto que, quando você cria um comentário de pendência, costuma ser o seu nome que será mencionado.
+Comentários de pendências devem incluir a palavra TODO, seguido pelo nome completo da pessoa que conhece mais do problema. Dois pontos é opcional. Um comentário explicando qual o requisito dessa tarefa é obrigatório. A principal motivação de ter um comentário de pendência é ser fácil de encontrar a pessoa que está sendo mencionada. Esse comentário não é um compromisso para a pessoa  resolver o problema. Tanto que, quando você cria um comentário de pendência, costuma ser o seu nome que será mencionado.
 
 ```ruby
   # ruim
@@ -451,7 +451,7 @@ Comentários de pendências devem incluir a palavra TODO, seguido pelo nome comp
 
 ### Definição de métodos
 
-* <a name="parenteses-def-metodos"></a>Use `def` com parênteses quando contém parâmetros. Nã use parênteses quando o metodo não aceita parâmetros.
+* <a name="parenteses-def-metodos"></a>Crie `def` com parênteses quando contém parâmetros. Não use parênteses quando o metodo não aceita parâmetros.
   <sup>[[link](#parenteses-def-metodos)]</sup>
 
      ```ruby
@@ -489,8 +489,8 @@ Comentários de pendências devem incluir a palavra TODO, seguido pelo nome comp
     end
     ```
 
-* <a name="metodo-de-linha-unica"></a>Evite escrever metodos em uma linha só. Apesar de serem populares, existe algumas pecularidades que fazem dessa abordagem indesejável.
-    <sup>[[link](#nometodo-de-linha-unica)]</sup>
+* <a name="metodo-de-linha-unica"></a>Evite escrever metodos em uma linha só. Apesar de ser populares, existe algumas pecularidades que fazem dessa abordagem indesejável.
+    <sup>[[link](#metodo-de-linha-unica)]</sup>
 
     ```ruby
     # ruim
@@ -547,7 +547,7 @@ Comentários de pendências devem incluir a palavra TODO, seguido pelo nome comp
     nil?
     ```
 
-* <a name="sem-parenteses-no-retorno"></a>Se o método não retorna um valor (ou não nos importamos com o retorno), o parenteses é opcional. (Com exceção se o argumento ocupa multiplas linhas, parênteses podem ajudar a leitura.)
+* <a name="sem-parenteses-no-retorno"></a>Se o método não retorna um valor (ou não nos importamos com o retorno), o parênteses é opcional. (Com exceção se o argumento ocupa múltiplas linhas, parênteses podem ajudar a leitura.)
     <sup>[[link](#sem-parenteses-no-retorno)]</sup>
 
     ```ruby
@@ -715,7 +715,7 @@ Em ambos os casos:
 
 ### Operador ternário
 
-* <a name="evite-operadores-ternarios-complexos"></a>Evite utilizar operadores ternários (`?:`) a não ser que a condĩção seja extremamente trivial. Por outro lado, use o operador ternário (`?:`) ao invés de `if/then/else/end` para condições de linhas únicas.<sup>[[link](#evite-operadores-ternarios-complexos)]</sup>
+* <a name="evite-operadores-ternarios-complexos"></a>Evite utilizar operadores ternários (`?:`) a não ser que a condição seja extremamente trivial. Por outro lado, use o operador ternário (`?:`) ao invés de `if/then/else/end` para condições de linhas únicas.<sup>[[link](#evite-operadores-ternarios-complexos)]</sup>
 
     ```ruby
     # ruim
@@ -739,9 +739,7 @@ Em ambos os casos:
     end
     ```
 
-* <a name="operador-ternario-condicoes-simples"></a>Evite multiplas condições em operadores ternários.
-    Operadores ternários são melhor usados em condições simples.
-    <sup>[[link](#operador-ternario-condicoes-simples)]</sup>
+* <a name="operador-ternario-condicoes-simples"></a>Evite multiplas condições em operadores ternários. Operadores ternários são melhor usados em condições simples. <sup>[[link](#operador-ternario-condicoes-simples)]</sup>
 
 * <a name="sem-multiplas-linhas-ternario"></a>Evite multiplas linhas com o operador ternário `?:`, nesses casos, use `if/then/else/end`.
     <sup>[[link](#sem-multiplas-linhas-ternario)]</sup>
@@ -867,9 +865,9 @@ Em ambos os casos:
     end.map { |name| name.upcase }
     ```
 
-    Algumas pessoas irão argumentar que chaves com multiplas linhas são bem vistas com o uso do `{...}`, mas elas devem perguntar a si mesmo se esse código é de fácil leitura e também se o conteúdo pode ser extraído em alguns métodos.
+    Algumas pessoas irão argumentar que chaves com multiplas linhas são bem vistas com o uso do `{...}`, mas elas devem perguntar a si mesmo se esse código é de fácil leitura e também se o conteúdo pode ser extraído em algum método.
 
-* <a name="self-assignment"></a>Sempre que possível, use a forma abreviada dos operadores.<sup>[[link](#self-assignment)]</sup>
+* <a name="forma-abreviada"></a>Sempre que possível, use a forma abreviada dos operadores.<sup>[[link](#forma-abreviada)]</sup>
 
     ```ruby
     # ruim
@@ -889,7 +887,7 @@ Em ambos os casos:
     x &&= y
     ```
 
-* <a name="semicolons"></a>Evite usar ponto e vírgula, com exceção de declarações de classes em uma linha. Quando for apropriado utilizar ponto e vírgula, utilize apenas quando o bloco lógico estiver terminado: Não deve ter espaço antes do ponto e vírgula.<sup>[[link](#semicolons)]</sup>
+* <a name="ponto-e-virgula"></a>Evite usar ponto e vírgula, com exceção de declarações de classes em uma linha. Quando for apropriado utilizar ponto e vírgula, utilize apenas quando o bloco lógico estiver terminado: Não deve ter espaço antes do ponto e vírgula.<sup>[[link](#ponto-e-virgula)]</sup>
 
     ```ruby
     # ruim
@@ -905,8 +903,8 @@ Em ambos os casos:
     puts 'foo', 'bar' # Isso se aplica a puts em particular
     ```
 
-* <a name="colon-use"></a>Use :: apenas para referenciar constantes (Isso inclui classes e módulos) e construtores (Array() ou Nakogiri::HTML()).
-    Não use :: para inicialização de métodos. <sup>[[link](#colon-use)]</sup>
+* <a name="dois-pontos"></a>Use :: apenas para referenciar constantes (Isso inclui classes e módulos) e construtores (Array() ou Nakogiri::HTML()).
+    Não use :: para inicialização de métodos. <sup>[[link](#dois-pontos)]</sup>
 
     ```ruby
     # ruim
@@ -920,8 +918,8 @@ Em ambos os casos:
     SomeModule::SomeClass()
     ```
 
-* <a name="redundant-return"></a>Evite usar `return` quando não for necessário.
-    <sup>[[link](#redundant-return)]</sup>
+* <a name="return-redundante"></a>Evite usar `return` quando não for necessário.
+    <sup>[[link](#return-redundante)]</sup>
 
     ```ruby
     # ruim
@@ -935,7 +933,7 @@ Em ambos os casos:
     end
     ```
 
-* <a name="assignment-in-conditionals"></a>Não faça condições com o uso de `=`.<sup>[[link](#assignment-in-conditionals)]</sup>
+* <a name="atribuicao-em-condicao"></a>Não faça condições com o uso de `=`.<sup>[[link](#atribuicao-em-condicao)]</sup>
 
     ```ruby
     # ruim - deixa explicito o uso da condição
@@ -956,15 +954,15 @@ Em ambos os casos:
 
     ```
 
-* <a name="double-pipe-for-uninit"></a>Está liberado o uso de `||=` na inicialização das variáveis.
-    <sup>[[link](#double-pipe-for-uninit)]</sup>
+* <a name="barras-duplas-para-inicializar"></a>Está liberado o uso de `||=` na inicialização das variáveis.
+    <sup>[[link](#barras-duplas-para-inicializar)]</sup>
 
     ```ruby
     # Define o nome para Bozhidar, somente se ele for nil ou false
     name ||= 'Bozhidar'
     ```
 
-* <a name="no-double-pipes-for-bools"></a>Não use `||=` para inicializar variáveis do tipo boolean, ao invés disso, considere o que deve ser feito caso a variável esteja definida como `false`)<sup>[[link](#no-double-pipes-for-bools)]</sup>
+* <a name="sem-barra-dupla-para-bool"></a>Não use `||=` para inicializar variáveis do tipo boolean, ao invés disso, considere o que deve ser feito caso a variável esteja definida como `false`)<sup>[[link](#sem-barra-dupla-para-bool)]</sup>
 
     ```ruby
     # ruim - vai definir como true, caso seja false
@@ -974,8 +972,8 @@ Em ambos os casos:
     enabled = true if enabled.nil?
     ```
 
-* <a name="lambda-calls"></a>Use `.call` explicitamente quando for usar lambdas.
-    <sup>[[link](#lambda-calls)]</sup>
+* <a name="chamada-lambda"></a>Use `.call` explicitamente quando for usar lambdas.
+    <sup>[[link](#chamada-lambda)]</sup>
 
     ```ruby
     # ruim
@@ -985,10 +983,10 @@ Em ambos os casos:
     lambda.call(x, y)
     ```
 
-* <a name="no-cryptic-perl"></a>Evite usar o estilo Perl para variáveis especiais (como, `$0-9`, `$`, etc. ). Seu uso é meio enigmático e desincorajado. Prefira formas mais completas, como: `$PROGRAM_NAME`.<sup>[[link](#no-cryptic-perl)]</sup>
+* <a name="sem-perl-estilo"></a>Evite usar o estilo Perl para variáveis especiais (como, `$0-9`, `$`, etc. ). Seu uso é meio enigmático e desincorajado. Prefira formas mais completas, como: `$PROGRAM_NAME`.<sup>[[link](#sem-perl-estilo)]</sup>
 
-* <a name="single-action-blocks"></a>Quando um metodo contém apenas um argumento, e seu conteúdo é apenas uma leitura ou chamada de outro método sem argumentos, use a abreviação `&:`.
-    <sup>[[link](#single-action-blocks)]</sup>
+* <a name="blocos-de-acao-simples"></a>Quando um metodo contém apenas um argumento, e seu conteúdo é apenas uma leitura ou chamada de outro método sem argumentos, use a abreviação `&:`.
+    <sup>[[link](#blocos-de-acao-simples)]</sup>
 
     ```ruby
     # ruim
@@ -1000,7 +998,7 @@ Em ambos os casos:
     bluths.select(&:blue_self?)
     ```
 
-* <a name="redundant-self"></a>Prefira utilizar `some_method` do que `self.some_method` quando usar outro método da mesma instancia.<sup>[[link](#redundant-self)]</sup>
+* <a name="self-redundante"></a>Prefira utilizar `some_method` do que `self.some_method` quando usar outro método da mesma instancia.<sup>[[link](#self-redundante)]</sup>
 
     ```ruby
     # ruim
@@ -1020,10 +1018,10 @@ Em ambos os casos:
     2. O *lado esquerdo da igualdade*, quando chamar o método de atribuição, incluindo atribuição de um atributo e `self` sendo uma model do ActiveRecord: `self.guest = user`.
     3. Referenciando a instance da classe atual: `self.class`.
 
-* <a name="freeze-constants"></a>Quando for definir algum objeto de um tipo que pode ser alterado, mas com a intenção de ser uma constante, não esqueça de utilizar o método `freeze`. Exemplos comuns são: strings, arrays, e hashes.
-    ([Leia mais sobre isso][ruby-freeze].)<sup>[[link](#freeze-constants)]</sup>
+* <a name="constante-freeze"></a>Quando for definir algum objeto de um tipo que pode ser alterado, mas com a intenção de ser uma constante, não esqueça de utilizar o método `freeze`. Exemplos comuns são: strings, arrays, e hashes.
+    ([Leia mais sobre isso][ruby-freeze].)<sup>[[link](#constante-freeze)]</sup>
 
-    Isso acontece por que, no Ruby, constantes são não tem um tipo único. Utilizando `freeze` nós garantimos que o tipo não será mudado e portanto uma constante de fato, qualquer tentativa de mudança irá gerar uma exceção. 
+    Isso acontece por que no Ruby, constantes não tem um tipo único. Utilizando `freeze` nós garantimos que o tipo não será mudado e portanto será uma constante de fato, qualquer tentativa de mudança irá gerar uma exceção. 
 
     ```ruby
     # ruim
@@ -1075,13 +1073,13 @@ Em ambos os casos:
 
 * <a name="screaming-snake-case"></a>Para outras constantes, utilize o padrão: `SCREAMING_SNAKE_CASE`.<sup>[[link](#screaming-snake-case)]</sup>
 
-* <a name="predicate-method-names"></a>Nome dos predicados dos métodos (Método que retorna um valor boolean) devem terminar com ponto de interrogação (exemplo: `Array#empty?`).<sup>[[link](#predicate-method-names)]</sup>
+* <a name="nome-predicado-de-metodos"></a>Nome dos predicados dos métodos (Método que retorna um valor boolean) devem terminar com ponto de interrogação (exemplo: `Array#empty?`).<sup>[[link](#nome-predicado-de-metodos)]</sup>
 
-* <a name="bang-methods"></a>Nome de métodos que são potenciallmente "perigosos" (exemplo: métodos que modificam `self` ou argumentos, `exit!`, etc.) devem terminar com um ponto de exclamação. Um `bang method` só deve existir caso haja um `non-bang` correspondente. ([Leia mais sobre isso][ruby-naming-bang].)
-    <sup>[[link](#bang-methods)]</sup>
+* <a name="metodo-bang"></a>Nome de métodos que são potenciallmente "perigosos" (exemplo: métodos que modificam `self` ou argumentos, `exit!`, etc.) devem terminar com um ponto de exclamação. Um `bang method` só deve existir caso haja um `non-bang` correspondente. ([Leia mais sobre isso][ruby-naming-bang].)
+    <sup>[[link](#metodo-bang)]</sup>
 
-* <a name="throwaway-variables"></a>Nomeie variáveis temporarias com `_`.
-    <sup>[[link](#throwaway-variables)]</sup>
+* <a name="variaveis-temporararia"></a>Nomeie variáveis temporarias com `_`.
+    <sup>[[link](#variaveis-temporararia)]</sup>
 
     ```ruby
     version = '3.2.1'
@@ -1090,8 +1088,8 @@ Em ambos os casos:
 
 ## Classes
 
-* <a name="avoid-class-variables"></a>Evite usar (`@@`) em classes devido ao seu comportamento desagradável em heranças.
-    <sup>[[link](#avoid-class-variables)]</sup>
+* <a name="evite-variaveis-de-classe"></a>Evite usar (`@@`) em classes devido ao seu comportamento desagradável em heranças.
+    <sup>[[link](#evite-variaveis-de-classe)]</sup>
 
     ```ruby
     class Parent
@@ -1111,8 +1109,8 @@ Em ambos os casos:
 
   Como você pode ver, todas as classes em um sistema de hierarquia irão compartilhar uma variável em comum. As variáveis da classe instanciada são preferíveis a variáveis da classe atual.
 
-* <a name="singleton-methods"></a>Use `def self.method` para definir métodos com o padrão singleton. Isso faz com que o método seja mais resistente a mudanças.
-    <sup>[[link](#singleton-methods)]</sup>
+* <a name="metodo-singleton"></a>Use `def self.method` para definir métodos com o padrão singleton. Isso faz com que o método seja mais resistente a mudanças.
+    <sup>[[link](#metodo-singleton)]</sup>
 
     ```ruby
     class TestClass
@@ -1159,8 +1157,8 @@ Em ambos os casos:
     end
     ```
 
-* <a name="access-modifiers"></a>Indente métodos `public`, `protected`, e
-    `private` tanto quanto a definição do método é aplicada. Deixe uma linha vazia antes e depois.<sup>[[link](#access-modifiers)]</sup>
+* <a name="acessando-modificadores"></a>Indente métodos `public`, `protected`, e
+    `private` tanto quanto a definição do método é aplicada. Deixe uma linha vazia antes e depois.<sup>[[link](#acessando-modificadores)]</sup>
 
     ```ruby
     class SomeClass
@@ -1178,8 +1176,8 @@ Em ambos os casos:
 
 ## Exceções
 
-* <a name="exception-flow-control"></a>Não use exceções para controle de fluxo.
-    <sup>[[link](#exception-flow-control)]</sup>
+* <a name="fluxo-controle-excecao"></a>Não use exceções para controle de fluxo.
+    <sup>[[link](#fluxo-controle-excecao)]</sup>
 
     ```ruby
     # ruim
@@ -1197,8 +1195,8 @@ Em ambos os casos:
     end
     ```
 
-* <a name="dont-rescue-exception"></a>Evite capturar a classe `Exception`.
-    <sup>[[link](#dont-rescue-exception)]</sup>
+* <a name="sem-excecao-generica"></a>Evite capturar a classe `Exception`.
+    <sup>[[link](#sem-excecao-generica)]</sup>
 
     ```ruby
     # ruim
@@ -1223,7 +1221,7 @@ Em ambos os casos:
     end
     ```
 
-* <a name="redundant-exception"></a>Não declare a exceção `RuntimeError` com dois argumentos. Prefira erros de sub-classes e erros explicítos de criação.<sup>[[link](#redundant-exception)]</sup>
+* <a name="excecoes-redundantes"></a>Não declare a exceção `RuntimeError` com dois argumentos. Prefira erros de sub-classes e erros explicítos de criação.<sup>[[link](#excecoes-redundantes)]</sup>
 
     ```ruby
     # ruim
@@ -1238,13 +1236,13 @@ Em ambos os casos:
     ```
 
 
-* <a name="exception-class-messages"></a>
-    Ao invés de uma instancia para tratar a exceção,'prefira fornecer uma classe e uma mensagem para exceção em dois argumentos separados com `raise`. <sup>[[link](#exception-class-messages)]</sup>
+* <a name="messagem-de-classe-de-excecao"></a>
+    Ao invés de uma instancia para tratar a exceção,'prefira fornecer uma classe e uma mensagem para exceção em dois argumentos separados com `raise`. <sup>[[link](#messagem-de-classe-de-excecao)]</sup>
 
     ```Ruby
     # ruim
     raise SomeException.new('message')
-    # Note que não há forma de fazer: `raise SomeException.new('message'), backtrace`.
+    # Note que não há uma forma de fazer: `raise SomeException.new('message'), backtrace`.
 
     # bom
     raise SomeException, 'message'
@@ -1252,8 +1250,8 @@ Em ambos os casos:
     ```
 
 
-* <a name="rescue-as-modifier"></a>Evite usar `rescue` na sua forma modificada.
-    <sup>[[link](#rescue-as-modifier)]</sup>
+* <a name="rescue-modificado"></a>Evite usar `rescue` na sua forma modificada.
+    <sup>[[link](#rescue-modificado)]</sup>
 
     ```ruby
     # ruim
@@ -1267,21 +1265,21 @@ Em ambos os casos:
     end
     ```
 
-## Collections
+## Coleções
 
-* <a name="map-over-collect"></a>Prefira o método `map` ao
-    `collect`.<sup>[[link](#map-over-collect)]</sup>
+* <a name="map-ao-inves-collect"></a>Prefira o método `map` ao
+    `collect`.<sup>[[link](#map-ao-inves-collect)]</sup>
 
-* <a name="detect-over-find"></a>Prefira o método `detect` ao invés de `find`. `find` tem um uso ambiguo por causa do método do ActiveRecord's `find` - Utilizar `detect` deixa claro que você está trabalhando com uma coleção em Ruby, não um objeto ActiveRecord.
-    <sup>[[link](#detect-over-find)]</sup>
+* <a name="detect-ao-inves-find"></a>Prefira o método `detect` ao invés de `find`. `find` tem um uso ambiguo por causa do método do ActiveRecord's `find` - Utilizar `detect` deixa claro que você está trabalhando com uma coleção em Ruby, não um objeto ActiveRecord.
+    <sup>[[link](#detect-ao-inves-find)]</sup>
 
-* <a name="reduce-over-inject"></a>Prefira o método `reduce` ao invés de `inject`.
-    <sup>[[link](#reduce-over-inject)]</sup>
+* <a name="reduce-ao-inves-inject"></a>Prefira o método `reduce` ao invés de `inject`.
+    <sup>[[link](#reduce-ao-inves-inject)]</sup>
 
-* <a name="size-over-count"></a>Prefira o método `size` ao invés de `length` ou `count` por motivos performáticos.<sup>[[link](#size-over-count)]</sup>
+* <a name="size-ao-inves-count"></a>Prefira o método `size` ao invés de `length` ou `count` por motivos performáticos.<sup>[[link](#size-ao-inves-count)]</sup>
 
-* <a name="empty-collection-literals"></a>Prefira criar array e hash de forma literal, a não ser que você passe parâmetros para seus construtores.
-    <sup>[[link](#empty-collection-literals)]</sup>
+* <a name="colecoes-vazias"></a>Prefira criar array e hash de forma literal, a não ser que você passe parâmetros para seus construtores.
+    <sup>[[link](#colecoes-vazias)]</sup>
 
     ```ruby
     # ruim
@@ -1292,7 +1290,7 @@ Em ambos os casos:
     arr = []
     hash = {}
 
-    # bom por que o construtor necessita de parametros
+    # bom por que o construtor necessita de parâmetros
     x = Hash.new { |h, k| h[k] = {} }
     ```
 
@@ -1309,8 +1307,8 @@ Em ambos os casos:
     # => 'one, two, three'
     ```
 
-* <a name="symbol-keys"></a>Nas hash key, use simbolos ao invés de strings.
-    <sup>[[link](#symbol-keys)]</sup>
+* <a name="simbolo-chaves-hash"></a>Nas hash key, use simbolos ao invés de strings.
+    <sup>[[link](#simbolo-chaves-hash)]</sup>
 
     ```ruby
     # ruim
@@ -1320,7 +1318,7 @@ Em ambos os casos:
     hash = { :one => 1, :two => 2, :three => 3 }
     ```
 
-* <a name="symbol-literals"></a>Use simbolos ao invés de strings sempre que possível.<sup>[[link](#symbol-literals)]</sup>
+* <a name="simbolos-literais"></a>Use simbolos ao invés de strings sempre que possível.<sup>[[link](#simbolos-literais)]</sup>
 
     ```ruby
     # ruim
@@ -1330,9 +1328,9 @@ Em ambos os casos:
     :symbol
     ```
 
-* <a name="deprecated-hash-methods"></a>Use `Hash#key?` ao invés de
+* <a name="metodo-hash-desatualizado"></a>Use `Hash#key?` ao invés de
     `Hash#has_key?` e `Hash#value?` ao invés de `Hash#has_value?`. De acordo com Matz, as formas longas são consideradas desatualizadas.
-    <sup>[[link](#deprecated-hash-methods)]</sup>
+    <sup>[[link](#metodo-hash-desatualizado)]</sup>
 
     ```ruby
     # ruim
@@ -1344,8 +1342,8 @@ Em ambos os casos:
     hash.value?(value)
     ```
 
-* <a name="multiline-hashes"></a>Declare hashes em multiplas linhas quando for deixar o código mais fácil para leitura e utilize virgula para garantir que o parametro mudou.
-    <sup>[[link](#multiline-hashes)]</sup>
+* <a name="hash-multiplas-linhas"></a>Declare hashes em multiplas linhas quando for deixar o código mais fácil para leitura e utilize virgula para garantir que o parâmetro mudou.
+    <sup>[[link](#hash-multiplas-linhas)]</sup>
 
     ```ruby
     hash = {
@@ -1358,7 +1356,7 @@ Em ambos os casos:
     }
     ```
 
-* <a name="array-trailing-comma"></a>Use vírgula em `Array` que abrange mais de uma linha <sup>[[link](#array-trailing-comma)]</sup>
+* <a name="array-virgula-multiplas-linhas"></a>Use vírgula em `Array` que abrange mais de uma linha <sup>[[link](#array-virgula-multiplas-linhas)]</sup>
 
     ```ruby
     # bom
@@ -1373,9 +1371,9 @@ Em ambos os casos:
     ]
     ```
 
-## Strings
+## Textos
 
-* <a name="string-interpolation"></a>Prefira interpolar strings ao invés de concatena-las: <sup>[[link](#string-interpolation)]</sup>
+* <a name="interpolacao-string"></a>Prefira interpolar strings ao invés de concatena-las: <sup>[[link](#interpolacao-string)]</sup>
 
     ```ruby
     # ruim
@@ -1401,7 +1399,7 @@ Em ambos os casos:
     cache.write(CACHE_KEY % @user.id)
     ```
 
-* <a name="string-concatenation"></a>Evite usar `String#+` quando você precisa criar grandes pedaços de dado. Ao invés disso, use `String#<<`. Concatenação altera o conteúdo da string e é sempre mais rápido que `String#+`, que cria um novo objeto de strings.<sup>[[link](#string-concatenation)]</sup>
+* <a name="concatenacao-string"></a>Evite usar `String#+` quando você precisa criar grandes pedaços de dado. Ao invés disso, use `String#<<`. Concatenação altera o conteúdo da string e é sempre mais rápido que `String#+`, que cria um novo objeto de strings.<sup>[[link](#concatenacao-string)]</sup>
 
     ```ruby
     # bom e rápido
@@ -1413,8 +1411,8 @@ Em ambos os casos:
     end
     ```
 
-* <a name="multi-line-strings"></a>Para concatenar multiplas linhas de string use `\` no fim das linhas ao invés de `+` ou `<<`
-    <sup>[[link](#multi-line-strings)]</sup>
+* <a name="strings-de-multiplas-linhas"></a>Para concatenar multiplas linhas de string use `\` no fim das linhas ao invés de `+` ou `<<`
+    <sup>[[link](#strings-de-multiplas-linhas)]</sup>
 
     ```ruby
     # ruim
@@ -1431,8 +1429,8 @@ Em ambos os casos:
 
 ## Expressões regulares
 
-* <a name="regex-named-groups"></a>Evite usar `$1-9` por que pode ser difícil de localizar o seu conteṕudo. Prefira usar variáveis.
-    <sup>[[link](#regex-named-groups)]</sup>
+* <a name="nomeando-regex"></a>Evite usar `$1-9` por que pode ser difícil de localizar o seu conteṕudo. Prefira usar variáveis.
+    <sup>[[link](#nomeando-regex)]</sup>
 
     ```ruby
     # ruim
@@ -1446,7 +1444,7 @@ Em ambos os casos:
     process meaningful_var
     ```
 
-* <a name="caret-and-dollar-regexp"></a>Tenha cuidado com `^` e `$` quando eles se encaixam no começo o no fim das linhas e não fim das strings. Se você quer localizar todo o texto, use: `\A` e `\z`.<sup>[[link](#caret-and-dollar-regexp)]</sup>
+* <a name="tio-acento-dolar-regex"></a>Tenha cuidado com `^` e `$` quando eles se encaixam no começo o no fim das linhas e não fim das strings. Se você quer localizar todo o texto, use: `\A` e `\z`.<sup>[[link](#tio-acento-dolar-regex)]</sup>
 
     ```ruby
     string = "some injection\nusername"
@@ -1454,7 +1452,7 @@ Em ambos os casos:
     string[/\Ausername\z/] # não encontrou
     ```
 
-* <a name="comment-regexes"></a>Para regex complexos, use `x`. Isso faz com que seja mais fácil de ler e você pode adicionar alguns comentários. Só tenha cuidado com os espaços que podem ser ignorados. <sup>[[link](#comment-regexes)]</sup>
+* <a name="comentarios-regex"></a>Para regex complexos, use `x`. Isso faz com que seja mais fácil de ler e você pode adicionar alguns comentários. Só tenha cuidado com os espaços que podem ser ignorados. <sup>[[link](#comentarios-regex)]</sup>
 
     ```ruby
     regexp = %r{
@@ -1468,7 +1466,7 @@ Em ambos os casos:
 
 ## Notação de porcentagem
 
-* <a name="percent-literal-delimiters"></a>Prefira parenteses ao invés de chaves, colchetes ou traço quando utilizar `%` para consistencia e pelo comportamento do `%` ser mais próximos da chamada de métodos.<sup>[[link](#percent-literal-delimiters)]</sup>
+* <a name="porcentagem-notacao-delimitador"></a>Prefira parenteses ao invés de chaves, colchetes ou traço quando utilizar `%` para consistencia e pelo comportamento do `%` ser mais próximos da chamada de métodos.<sup>[[link](#porcentagem-notacao-delimitador)]</sup>
 
     ```ruby
     # ruim
@@ -1480,13 +1478,13 @@ Em ambos os casos:
     %w(date locale)
     ```
 
-* <a name="percent-w"></a>Use `%w` livremente.<sup>[[link](#percent-w)]</sup>
+* <a name="w-porcentagem"></a>Use `%w` livremente.<sup>[[link](#w-porcentagem)]</sup>
 
     ```ruby
     STATES = %w(draft open closed)
     ```
 
-* <a name="percent-parens"></a>Use `%()` para textos de linhas únicas que necessite tanto interpolação quando aspas duplas. Para multiplas linhas, prefira heredoc.<sup>[[link](#percent-parens)]</sup>
+* <a name="parenteses-porcentagem"></a>Use `%()` para textos de linhas únicas que necessite tanto interpolação quando aspas duplas. Para multiplas linhas, prefira heredoc.<sup>[[link](#parenteses-porcentagem)]</sup>
 
     ```ruby
     # ruim - sem necessidade de interpolação
@@ -1505,7 +1503,7 @@ Em ambos os casos:
     %(<tr><td class="name">#{name}</td>)
     ```
 
-* <a name="percent-r"></a>Use `%r` somente para expressões regulares localizando mais de um caracter '/'.<sup>[[link](#percent-r)]</sup>
+* <a name="r-porcentagem"></a>Use `%r` somente para expressões regulares localizando mais de um caracter '/'.<sup>[[link](#r-porcentagem)]</sup>
 
     ```ruby
     # ruim
@@ -1519,8 +1517,8 @@ Em ambos os casos:
     %r(^/blog/2011/(.*)$)
     ```
 
-* <a name="percent-x"></a>Evite o uso de `%x`, a não ser que você esteja invocando um comando com aspas invertidas (O que é indesejável).
-    <sup>[[link](#percent-x)]</sup>
+* <a name="x-porcentagem"></a>Evite o uso de `%x`, a não ser que você esteja invocando um comando com aspas invertidas (O que é indesejável).
+    <sup>[[link](#x-porcentagem)]</sup>
 
     ```ruby
     # ruim
@@ -1533,9 +1531,9 @@ Em ambos os casos:
 
 ## Rails
 
-* <a name="next-line-return"></a>Quando retornar imediatamente depois de
+* <a name="return-proxima-linha"></a>Quando retornar imediatamente depois de
     `render` ou `redirect_to`, coloque `return` na próxima linha, não na mesma.
-    <sup>[[link](#next-line-return)]</sup>
+    <sup>[[link](#return-proxima-linha)]</sup>
 
     ```ruby
     # ruim
@@ -1556,8 +1554,8 @@ Em ambos os casos:
     ```
 
 ### Escopo
-* <a name="scope-lambda"></a>Quando definir model no ActiveRecord, encaixe a relação em `lambda`.  Sem isso, a relação força o banco de dados a estabelezer a conexão quando a classe é carregada, não no ínicio.
-    <sup>[[link](#scope-lambda)]</sup>
+* <a name="escopo-lambda"></a>Quando definir model no ActiveRecord, encaixe a relação em `lambda`.  Sem isso, a relação força o banco de dados a estabelezer a conexão quando a classe é carregada, não no ínicio.
+    <sup>[[link](#escopo-lambda)]</sup>
 
     ```ruby
     # ruim
@@ -1585,8 +1583,9 @@ Em ambos os casos:
 [ruby-freeze]: http://blog.honeybadger.io/when-to-use-freeze-and-frozen-in-ruby/
 [avoid-else-return-early]: http://blog.timoxley.com/post/47041269194/avoid-else-return-early
 
-## Translation
+## Tradução
 
   Este guia também está disponível em outros idiomas:
 
-  - ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Chinese (Simplified)**: [1c7/ruby-airbnb](https://github.com/1c7/ruby-airbnb)
+  - ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Chinês (Simplificado)**: [1c7/ruby-airbnb](https://github.com/1c7/ruby-airbnb)
+  - ![usa](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/United-States.png) **Inglês**: [airbnb/ruby](https://github.com/airbnb/ruby)
