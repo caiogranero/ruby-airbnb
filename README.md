@@ -1,6 +1,6 @@
 # Ruby Style Guide
 
-O guia de estilo paras Ruby do Airbnb.
+O guia de estilo para Ruby do Airbnb.
 
 Inspirado por [GitHub's guide](https://web.archive.org/web/20160410033955/https://github.com/styleguide/ruby) e [Bozhidar Batsov's guide][bbatsov-ruby].
 
@@ -43,7 +43,7 @@ Airbnb também mantém o [Guia de estilo para JavaScript][airbnb-javascript].
 
 ### Indentação
 
-* <a name="identacao-padrao"></a>Use tabs com dois espaçamento.<sup>[[link](#identacao-padrao)]</sup>
+* <a name="identacao-padrao"></a>Use tabs com dois espaçamentos.<sup>[[link](#identacao-padrao)]</sup>
 
 * <a name="indente-when-e-case"></a>Indente `when` da mesma forma que `case`.
     <sup>[[link](#indente-when-e-case)]</sup>
